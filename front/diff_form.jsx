@@ -8,7 +8,7 @@ export default class DiffForm extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            texts: [],
+            texts: ['', ''],
             result: []
         }
     }
@@ -17,7 +17,8 @@ export default class DiffForm extends React.Component{
         return (
             <form className="pure-form pure-form-stacked" onSubmit={this.onSubmit.bind(this)}>
                 {['first', 'second'].map((title, index) =>
-                    <DiffFile title={title} key={index} onChange={this.setText.bind(this, index)}/>
+                    <DiffFile title={title} key={index} value={this.state.texts[index]}
+                              onChange={this.setText.bind(this, index)}/>
                 )}
                 <button type="submit" className="pure-button pure-button-primary">Compare</button>
                 <Result lines={this.state.result}/>

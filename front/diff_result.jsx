@@ -7,6 +7,7 @@ export default function DiffResult(props) {
             <tbody>
             {props.lines.map((line, ind) =>
                 <tr key={ind}>
+                    <td>{ind+1}</td>
                     <td>{line[0]}</td>
                     <td>{line[1]}</td>
                 </tr>

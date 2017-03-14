@@ -1,4 +1,8 @@
 #Test task comments
+Hey, guys, this is just a test task. If You do not know what's this about - just close
+
+## task itself
+diff on a web form. react + nodejs
 
 ## requirements
 nodejs.v6
